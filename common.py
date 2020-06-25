@@ -10,6 +10,8 @@ from pytorch_points.utils.pc_utils import save_ply, save_ply_property, save_ply_
 from pytorch_points.network.geo_operations import mean_value_coordinates_3D, green_coordinates_3D, compute_face_normals_and_areas
 from glob import glob
 
+
+
 def is_type(file, file_ext):
     if isinstance(file_ext, str):
         file_ext = [file_ext]

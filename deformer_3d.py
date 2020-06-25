@@ -8,6 +8,8 @@ import torch.nn as nn
 import torch.utils.data
 import numpy as np
 import pymesh
+
+
 from pytorch_points.network.geo_operations import mean_value_coordinates_3D, edge_vertex_indices, furthest_point_sample
 from pytorch_points.misc import logger
 from pytorch_points.utils.geometry_utils import build_gemm, Mesh, get_edge_points
@@ -22,6 +24,8 @@ import network2 as networks
 
 def test(net=None, subdir="test"):
     opt.phase = "test"
+    a=1
+    b=2
     if isinstance(opt.target_model, str):
         opt.target_model = [opt.target_model]
 
@@ -53,7 +57,7 @@ def test(net=None, subdir="test"):
     else:
         net.eval()
 
-    print(net)
+    #print(net)
 
     test_output_dir = os.path.join(opt.log_dir, subdir)
     os.makedirs(test_output_dir, exist_ok=True)
