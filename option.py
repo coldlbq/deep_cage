@@ -12,11 +12,11 @@ class BaseOptions():
     It also gathers additional options defined in <modify_commandline_options> functions in both dataset class and model class.
     """
 
-    def __init__(self):
+    def __init__ (self):
         """Reset the class; indicates the class hasn't been initailized"""
         self.initialized = False
 
-    def initialize(self, parser):
+    def initialize (self, parser):
         """Define the common options that are used in both training and test."""
         # basic parameters
         parser.add_argument("--name", help="experiment name")
