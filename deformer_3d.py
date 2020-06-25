@@ -59,6 +59,7 @@ def test(net=None, subdir="test"):
 
     #print(net)
 
+
     test_output_dir = os.path.join(opt.log_dir, subdir)
     os.makedirs(test_output_dir, exist_ok=True)
     with torch.no_grad():
